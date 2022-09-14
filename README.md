@@ -30,7 +30,4 @@ M.Zulkarnaen|Zulkarnaen70@gmail.com|[Instagram](https://www.instagram.com/zulkar
 
 ## Screenshots
 **Menu Client**
-![alt text](https://github.com/magerngulik/Clone-Food-Delivery-App/blob/main/assets/screenshot/dashboard.png)
-![alt text](https://github.com/magerngulik/Clone-Food-Delivery-App/blob/main/assets/screenshot/ss-serching.png)
-
-
+![alt text](https://github.com/magerngulik/Clone-Food-Delivery-App/blob/main/assets/screenshot/presentation.png)
