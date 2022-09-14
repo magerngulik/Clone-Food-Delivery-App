@@ -1,0 +1,7 @@
+List menuCategories = [
+{"name" = "Hambuger", icon = "icon"}
+
+
+
+
+]

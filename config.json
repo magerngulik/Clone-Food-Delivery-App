@@ -1,0 +1,12 @@
+{
+    "modules": [
+      "client/dasboard",
+      "client/home",
+      "client/orders",
+      "client/message",
+      "client/ewallet",
+      "client/profile",
+      "client/search",
+      "client/banner"
+    ]
+}
