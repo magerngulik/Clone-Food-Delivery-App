@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -133,8 +134,8 @@ class HomeView extends ConsumerWidget {
                   ),
                 ),
                 child: Row(
-                  children: [
-                    const Padding(
+                  children: const [
+                    Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Icon(Icons.search),
                     ),
@@ -164,7 +165,14 @@ class HomeView extends ConsumerWidget {
                 height: 200,
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                  color: Color(0xff3AC668),
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      Colors.yellow,
+                      Colors.green,
+                    ],
+                  ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(
                       40,
@@ -260,7 +268,7 @@ class HomeView extends ConsumerWidget {
                       width: 200,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(
+                          image: CachedNetworkImageProvider(
                             "${item['icon']}",
                           ),
                           fit: BoxFit.cover,

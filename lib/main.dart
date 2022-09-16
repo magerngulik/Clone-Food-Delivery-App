@@ -7,7 +7,7 @@ import './module/client/dasboard/view/dasboard_view.dart';
 void main() async {
   await initialize();
 
-  Widget mainView = DasboardView();
+  Widget mainView = const DasboardView();
 
   runApp(
     ProviderScope(

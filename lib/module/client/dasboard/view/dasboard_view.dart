@@ -18,7 +18,12 @@ class DasboardView extends ConsumerWidget {
       child: Scaffold(
         body: IndexedStack(
           index: controller.selectedIndex,
-          children: [HomeView(), OrdersView(), MessageView(), EwalletView()],
+          children: const [
+            HomeView(),
+            OrdersView(),
+            MessageView(),
+            EwalletView()
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: controller.selectedIndex,

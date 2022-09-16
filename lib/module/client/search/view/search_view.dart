@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../controller/search_controller.dart';
@@ -106,7 +107,7 @@ class SearchView extends ConsumerWidget {
                                 width: 100,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    image: NetworkImage(
+                                    image: CachedNetworkImageProvider(
                                       "${item['image']}",
                                     ),
                                     fit: BoxFit.cover,
@@ -192,7 +193,7 @@ class SearchView extends ConsumerWidget {
                                         width: 80,
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
-                                            image: NetworkImage(
+                                            image: CachedNetworkImageProvider(
                                               "${itemSubmenu['image-sub']}",
                                             ),
                                             fit: BoxFit.cover,
