@@ -1,7 +1,10 @@
 export 'package:clone_ui_food_dellivery/module/client/banner/controller/banner_controller.dart';
 export 'package:clone_ui_food_dellivery/module/client/banner/view/banner_view.dart';
+export 'package:clone_ui_food_dellivery/module/client/banner/widget/banner_item.dart';
 export 'package:clone_ui_food_dellivery/module/client/dasboard/controller/dasboard_controller.dart';
 export 'package:clone_ui_food_dellivery/module/client/dasboard/view/dasboard_view.dart';
+export 'package:clone_ui_food_dellivery/module/client/detailitem/controller/detailitem_controller.dart';
+export 'package:clone_ui_food_dellivery/module/client/detailitem/view/detailitem_view.dart';
 export 'package:clone_ui_food_dellivery/module/client/ewallet/controller/ewallet_controller.dart';
 export 'package:clone_ui_food_dellivery/module/client/ewallet/view/ewallet_view.dart';
 export 'package:clone_ui_food_dellivery/module/client/home/controller/home_controller.dart';

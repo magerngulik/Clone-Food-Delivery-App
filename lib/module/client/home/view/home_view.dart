@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:clone_ui_food_dellivery/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -153,7 +154,12 @@ class HomeView extends ConsumerWidget {
               height: 20.0,
             ),
             CategorieListTittleBanner(
-              onClik: () {},
+              onClik: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const BannerView()),
+                );
+              },
               titleBanner: 'Special Offers',
             ),
             const SizedBox(
@@ -261,26 +267,37 @@ class HomeView extends ConsumerWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int index) {
                   var item = controller.menuDiscont[index];
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Container(
-                      height: 100.0,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: CachedNetworkImageProvider(
-                            "${item['icon']}",
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailitemView(
+                                  item: item,
+                                )),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Container(
+                        height: 100.0,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: CachedNetworkImageProvider(
+                              "${item['icon']}",
+                            ),
+                            fit: BoxFit.cover,
                           ),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(
-                            16.0,
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(
+                              16.0,
+                            ),
                           ),
-                        ),
-                        border: Border.all(
-                          width: 10,
-                          color: Colors.white,
+                          border: Border.all(
+                            width: 10,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
